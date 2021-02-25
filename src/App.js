@@ -11,7 +11,8 @@ export default class App extends Component {
        name: '',
        quantity: '',
        prod_date: '',
-       variant: ''
+       variant: '',
+       batch_no: ''
     }
   }
 
@@ -30,7 +31,7 @@ export default class App extends Component {
   }
   
   render() {
-    const { name, quantity, prod_date, variant } = this.state;    
+    const { name, quantity, prod_date, variant, batch_no } = this.state;    
     return (
       <Container fluid className="container">
         <Header as='h2'>Zeezam Presents Production Logger</Header>
@@ -50,6 +51,10 @@ export default class App extends Component {
           <Form.Field>
             <label>Variant</label>
             <input placeholder='Enter the variant of the product, if available' type="text" name = "variant" value = {variant} onChange={this.changeHandler}/>
+          </Form.Field>
+          <Form.Field>
+            <label>Batch Number</label>
+            <input placeholder='Enter the batch number' type="number" name= "batch_no" value= {batch_no} onChange={this.changeHandler} />
           </Form.Field>
           
           <Button color="blue" type='submit' onClick={this.submitHandler}>Submit</Button>
