@@ -52,7 +52,7 @@ export default class App extends Component {
             <input placeholder='Enter the variant of the product, if available' type="text" name = "variant" value = {variant} onChange={this.changeHandler}/>
           </Form.Field>
           
-          <Button color="blue" type='submit'>Submit</Button>
+          <Button color="blue" type='submit' onClick={this.submitHandler}>Submit</Button>
         </Form>
       </Container>
     )
